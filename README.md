@@ -2,7 +2,11 @@
 
 ## Récupération du projet
 
-Dans un terminal, en tant qu'utilisateur lambda:
+Dans un terminal, en tant que root:
+
+    apt-get install git
+
+Puis, en tant qu'utilisateur lambda:
 
     git clone https://github.com/Sancho-Panza/phoneme-trainer.git
 
@@ -27,3 +31,11 @@ Puis en tant que root:
 Dans un terminal, en tant qu'utilisateur lambda depuis le répertoire du projet:
 
     make all
+
+## Mise à jour
+
+Dans un terminal, en tant qu'utilisateur lambda depuis le répertoire du projet:
+
+    git pull
+
+Il suffit ensuite de refaire l'étape de compilation et lancement du programme.
