@@ -26,11 +26,18 @@ void Window::init() {
   SDL_WM_SetIcon(IMG_Load(this->icon_location.data()), NULL);
   SDL_WM_SetCaption(this->title.data(), NULL);
 
+  // full screen mode
+  /*
   videoInfo = SDL_GetVideoInfo();
   this->size.x = videoInfo->current_w;
   this->size.y = videoInfo->current_h;
+  */
 
-  this->surface = SDL_SetVideoMode(this->size.x, this->size.y, 32, SDL_FULLSCREEN|SDL_DOUBLEBUF);
+  // window mode
+  this->size.x = 800;
+  this->size.y = 600;
+
+  this->surface = SDL_SetVideoMode(this->size.x, this->size.y, 32, SDL_DOUBLEBUF);
 
   if (this->surface == NULL) {
     error_quit(SDL_GetError());
