@@ -5,7 +5,7 @@ using namespace std;
 Window::Window() {
   Surface();
   this->icon_location = "./media/img/window/icon.png";
-  this->title = "Les Aventures de Papy !";
+  this->title = "Phoneme Trainer";
   this->origin.x = 0;
   this->origin.y = 0;
 }
