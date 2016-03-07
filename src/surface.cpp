@@ -32,33 +32,6 @@ void Surface::clear() {
   }
 }
 
-void Surface::draw_rectangle(Point bottom_left, Point top_right, Uint32 color) {
-
-  int i;
-
-  Point pix;
-
-  for (i = bottom_left.x; i <= top_right.x; i++) {
-    pix.x = i;
-
-    pix.y = bottom_left.y;
-    this->add_pix(pix, color);
-
-    pix.y = top_right.y;
-    this->add_pix(pix, color);
-  }
-
-  for (i = bottom_left.y; i <= top_right.y; i++) {
-    pix.y = i;
-
-    pix.x = bottom_left.x;
-    this->add_pix(pix, color);
-
-    pix.x = top_right.x;
-    this->add_pix(pix, color);
-  }
-}
-
 void Surface::error_quit(const char* error) {
   puts(error);
   SDL_Quit();

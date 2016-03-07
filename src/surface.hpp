@@ -13,7 +13,6 @@ class Surface {
     Surface();
     ~Surface();
     Surface(Point origin, Point size);
-    void free();
 
   protected:
     SDL_Surface* surface;
@@ -23,7 +22,6 @@ class Surface {
 
   public:
     void add_pix(Point pix, Uint32 color);
-    void draw_rectangle(Point bottom_left, Point top_right, Uint32 color);
     void print();
     void clear();
     void load_img(const char* img_name);
