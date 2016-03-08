@@ -42,5 +42,5 @@ void Window::init() {
     error_quit(SDL_GetError());
   }
 
-  printf("Taille de l'écran: %d, %d\n", this->size.x, this->size.y);
+  printf("Taille de la fenêtre ouverte: %d, %d\n", this->size.x, this->size.y);
 }
